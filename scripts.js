@@ -62,11 +62,9 @@ age = 40;
 // cannot be changed
 const birthYear = 1991;
 
-*/
-
 //Since you cannot mutate/reassign variables you can't declare a const var without a value
 
-//****** Coding "Challenge" LOL *************//
+//****** Coding "Challenge" LOL *************
 
 const markHeight = 1.69;
 const markWeight = 92;
@@ -74,9 +72,9 @@ const markWeight = 92;
 const johnHeight = 1.88;
 const johnWeight = 95;
 
-const markBMI = (markWeight / markHeight ** 2) / (markHeight * markHeight);
+const markBMI = markWeight / markHeight ** 2;
 
-const johnBMI = (johnWeight / johnHeight ** 2) / (johnHeight * johnHeight);
+const johnBMI = johnWeight / (johnHeight * johnHeight);
 
 const MarkHigherBMI = markBMI > johnBMI;
 console.log(MarkHigherBMI);
@@ -88,3 +86,67 @@ if(markBMI > johnBMI) {
 } else {
     console.log("Their BMI is the same!");
 }
+
+const firstName = 'Jonas';
+const job = 'developer';
+const birthYear = 1991;
+const year = 2021;
+
+const jonas = "I'm " + firstName + ", a " + (year - birthYear) + " years old " + job + "!";
+
+console.log(jonas);
+
+//000 template literals (back ticks)
+const jonasNew = `I'm ${firstName}, a ${year - birthYear} year old ${job}!`;
+console.log(jonasNew);
+
+console.log(`Just a regular string...`);
+
+console.log('String with \n\ a new line');
+
+console.log(`String
+multiple
+lines`);
+
+const age = 15;
+
+if(age >= 18) {
+    console.log("Too young to drive");
+} else {
+    const yearsLeft = 18 - age;
+    console.log(`Sarah can drive in ${yearsLeft} years!`);
+}
+
+const birthYear = 1991;
+let century;
+
+//000 century must be defined OUTSIDE the if statement
+if(birthYear <= 2000) {
+    century = 20;
+} else {
+    century = 21;
+}
+
+console.log(century);
+
+
+/************* CODING "CHALLeNGE" LOL #2 ***********
+
+
+const markHeight = 1.69;
+const markWeight = 92;
+
+const johnHeight = 1.88;
+const johnWeight = 95;
+
+const markBMI = markWeight / markHeight ** 2;
+
+const johnBMI = johnWeight / (johnHeight * johnHeight);
+
+if(markBMI > johnBMI) {
+    console.log(`Mark's BMI ${markBMI} is higher than John's ${johnBMI}!`)
+} else {
+    console.log(`John's BMI ${johnBMI} is higher than Mark's ${markBMI}!`)
+}
+
+*/

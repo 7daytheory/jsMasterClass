@@ -149,4 +149,186 @@ if(markBMI > johnBMI) {
     console.log(`John's BMI ${johnBMI} is higher than Mark's ${markBMI}!`)
 }
 
+
+//000 Type Conversion and Coercion
+
+//Conversion = Manual convert one type to another
+//Coercion = Javascript automatically changes the values
+
+//Type Conversion
+
+// This will add 18 to the end of 1991 because it's viewed as a string
+const inputYear = '1991';
+console.log(inputYear + 18);
+
+// Will add together
+console.log(Number(inputYear));
+console.log(Number(inputYear) + 18);
+
+console.log(Number('jonas'));
+//NaN = Not a Number or invalid number
+console.log(typeof NaN);
+
+console.log(String(23), 23);
+
+//Type Coercion
+
+//JS auto converts 23 to a string
+console.log('I am ' + 23 + ' years old');
+
+console.log('23' - '10' - 3);
+
+// + does NOT auto convert strings to ints
+console.log('23' + '10' - 3);
+
+console.log('23' - '10' * 3);
+
+console.log('23' >  '18');
+
+let n = '1' + 1; //11
+n = n - 1; // 11 - 1 = 10;
+
+console.log(n);
+
+
+// 000 Truthy and Falsy Values(Booleans)
+
+// 5 falsy values : 0, '', undefined, null, NaN
+// everything else is converted to true
+
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean('Jonas'));
+console.log(Boolean({}));
+console.log(Boolean(''));
+
+const money = 0;
+
+//0 is converted to a boolean -> false
+if(money) {
+    console.log("Don't spend it all");
+} else {
+    console.log("No Money!")
+}
+
+const money2 = 100;
+
+//100 is converted to a boolean -> true
+if(money2) {
+    console.log("Don't spend it all");
+} else {
+    console.log("No Money!")
+}
+
+
+let height;
+//height = 50;
+if(height) {
+    console.log('Yay!');
+} else {
+    console.log("height is undefined");
+}
+
+//Equality Operators
+
+// === 'strict' does not perform coercion
+// == 'loose' DOES type coercion
+
+const age = '18';
+//const age = 18;
+if(age === 18) console.log(`You are ${age} years old`);
+
+if(age === '18') console.log(`Strict: You are ${age} years old!`);
+
+if(age == '18') console.log(`Loose: You are ${age} years old!`);
+
+const favourite = Number(prompt("What's your fav number?"));
+
+console.log(favourite);
+console.log(typeof favourite);
+
+if(favourite == 23) { // '23' == 23
+    console.log('Cool! 23 is great');
+} else if (favourite === 7) {
+    console.log('7 is a great number');
+} else {
+    console.log("No cool numbers");
+}
+
+if(favourite !== 23) console.log("Why not 23?");
+
+
+///// Logical Operators
+
+const driversLicense = true;
+const goodVision = true;
+
+console.log(driversLicense && goodVision);
+console.log(driversLicense || goodVision);
+console.log(!driversLicense);
+
+if(driversLicense && goodVision) {
+    console.log('Sarah is good to Drive!')
+} else {
+    console.log('Not good to drive!');
+}
+
+const isTired = false;
+console.log(driversLicense && goodVision && isTired);
+
+console.log(driversLicense || goodVision || isTired);
+
+if(driversLicense && goodVision && !isTired) {
+    console.log('Good to drive!')
+} else {
+    console.log('Dont drive!')
+}
+
+
+// ********** Coding "Challenge" 3 LOL ***********
+
+const minScore = 100;
+const dolphins = [96, 108, 89];
+const koalas = [88, 91, 110];
+
+// const minScore = 100;
+// const dolphins = [97, 112, 101];
+// const koalas = [109, 95, 123];
+
+// const minScore = 100;
+// const dolphins = [97,112,101];
+// const koalas = [109,95,106];
+
+// I did this wrong -- too "advanced" for basics
+let i = 0;
+while(i < koalas.length) {
+
+console.log(`Dolphins: ${dolphins[i]}, Koalas: ${koalas[i]}`);
+if(dolphins[i] >= minScore && dolphins[i] >= koalas[i]) {
+    console.log("Dolphins win!")
+} else if(koalas[i] >= minScore && dolphins[i] <= koalas[i]) {
+    console.log("Koalas win!")
+} else if (koalas[i] >= minScore && dolphins[i] >= minScore && dolphins[i] === koalas[i]){
+    console.log("Tie Game")
+} else {
+    console.log("No Winner!")
+}
+i++;
+}
+
+// What they actualy wanted...
+
+const scoreDolphins = (96 + 108 + 89) / 3;
+const scoreKoalas = (109 + 95 + 110) / 3;
+
+if(scoreDolphins > scoreKoalas && scoreDolphins >= 100) {
+    console.log("Dolphins Win!")
+} else if (scoreKoalas > scoreDolphins && scoreKoalas >= 100) {
+    console.log("Koalas win!")
+} else if (scoreDolphins === scorekoalas && scoreDolphins >= 100 && scoreKoalas >= 100){
+    console.log("Tie Game!")
+} else {
+    console.log("No one wins!")
+}
+
 */

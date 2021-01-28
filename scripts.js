@@ -331,4 +331,41 @@ if(scoreDolphins > scoreKoalas && scoreDolphins >= 100) {
     console.log("No one wins!")
 }
 
+
+//000 Conditional Ternary Operator
+const age = 23;
+age >= 19 ? console.log('I can drink alcohol') : console.log('I cannot drink alcohol');
+
+//Ternary operator
+const drink = age >= 18 ? 'alcohol' : 'water';
+
+// Same thing without the ternary operator
+let drink2;
+if(age >= 18) {
+  drink2 = 'alcohol';
+} else {
+  drink2 = 'water';
+}
+
+//Ternary Operator inside back quotes(template literals)
+console.log(`I like to drink ${age >= 18 ? 'alcohol' : 'water'}`);
+
+
+// *********** Coding "Challenge" 4 ************ //
+
+const bill = 275;
+
+const tip = bill > 50 && bill < 200 ? 0.15 : 0.2;
+
+const total = `The total of your bill is ${bill + (bill * tip)}`;
+
+console.log(total);
+
 */
+
+
+/////////////////// BABEL ///////////////////
+
+//Use Babel to transpile and polyfill your code (converting back to ES5 to ensure browser compatibility for all users)
+
+

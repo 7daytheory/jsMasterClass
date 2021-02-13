@@ -81,8 +81,53 @@ const yearsUntilRetirement = (birthYear, firstName) => {
 
 console.log(yearsUntilRetirement(1991, "Matt"));
 
+
+// Calling functions within functions
+function cutFruitPieces(fruit) {
+  return fruit * 4;
+}
+
+function fruitProcessor(apples, oranges) {
+  const applePieces = cutFruitPieces(apples);
+  const orangePieces = cutFruitPieces(oranges);
+  const juice = `Juice with ${applePieces} apple pieces and ${orangePieces} orange slices`;
+  return juice;
+}
+
+console.log(fruitProcessor(2, 3));
+
 */
 
+// Functions coding "challenge" #1
+
+const calcAverage = (scores) => {
+  let totalScore = 0;
+  for(let i = 0; scores.length > i; i++) {
+    totalScore = scores[i] + totalScore;
+  }
+  return totalScore;
+}
+
+function checkWinner(avgDolphins, avgKoalas) {
+  if(avgKoalas > (avgDolphins * 2)) {
+    console.log("Koalas Win!")
+  } else if(avgDolphins > (avgKoalas * 2)) {
+    console.log("Dolphins win!");
+  } else {
+    console.log("No one wins!");
+  }
+}
+
+//Situation One
+const koalasScore = calcAverage([44,23,71]);
+const dolphinsScore = calcAverage([65,54,49]);
+
+//Situation Two
+const koalasScore2 = calcAverage([85,54,41]);
+const dolphinsScore2 = calcAverage([23,34,27]);
+
+checkWinner(koalasScore, dolphinsScore);
+checkWinner(koalasScore2, dolphinsScore2);
 
 
 

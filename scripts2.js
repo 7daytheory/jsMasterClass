@@ -1,0 +1,88 @@
+//Activate Strict mode for entire script
+'use strict';
+
+//Javascript Fundamentals part 2
+
+/*
+let hasDriversLicense = false;
+const passTest = true;
+
+// spelled var name wrong
+if(passTest) hasDriverLicense = true;
+
+if(hasDriversLicense) console.log("I can drive");
+
+const interface = 'Audio';
+const private = 424;
+
+// Without use strict it wouldn't report the bug & reserved words
+
+//Function (lol)
+function logger() {
+  console.log("My name is Matt");
+}
+
+// Calling the function
+logger();
+
+function fruitProcessor(apples, oranges) {
+  console.log(apples, oranges);
+  const juice = `Juice with ${apples} apples and ${oranges} oranges`;
+  return juice;
+}
+
+// 000 values being passed are called "argument"
+// stored returned result in "juice var"
+const juice = fruitProcessor(1, 3);
+console.log(juice);
+
+const appleOrangeJuice = fruitProcessor(2, 4);
+console.log(appleOrangeJuice);
+
+// Keep your code "dry" -> don't repeat yourself
+
+// Function declarations
+function calcAge1(birthYear) {
+    const age = 2021 - birthYear;
+    return age;
+    //return 2021 - birthYear; (works also)
+}
+
+//000 1991 is the argument - birthYear(in function) is the paramater
+const age = calcAge1(1991);
+
+// We can call function declaration *before* they are defined
+// We CANNOT call function expressions before they are defined
+
+// Function expression
+const calcAge2 = function (birthYear) {
+  return 2021 - birthYear;
+}
+
+const age2 = calcAge2(1991);
+
+console.log(age, age2);
+
+// *************  Arrow Function ****************** //
+//000 Arrow function RETURN with defining return value;
+const calcAge3 = birthYear => 2037 - birthYear;
+
+const age3 = calcAge3(1991);
+
+console.log(age3);
+
+//Arrow functions only auto return in single value functions
+const yearsUntilRetirement = (birthYear, firstName) => {
+  const age = 2037 - birthYear;
+  const retirement = 65 - age;
+  //return retirement;
+  return `${firstName} retires in ${retirement} years`;
+}
+
+console.log(yearsUntilRetirement(1991, "Matt"));
+
+*/
+
+
+
+

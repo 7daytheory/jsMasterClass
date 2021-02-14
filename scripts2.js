@@ -96,8 +96,6 @@ function fruitProcessor(apples, oranges) {
 
 console.log(fruitProcessor(2, 3));
 
-*/
-
 // Functions coding "challenge" #1
 
 const calcAverage = (scores) => {
@@ -128,6 +126,46 @@ const dolphinsScore2 = calcAverage([23,34,27]);
 
 checkWinner(koalasScore, dolphinsScore);
 checkWinner(koalasScore2, dolphinsScore2);
+
+// *********** ARRAYS ***************** //
+
+//literal syntax
+const friends = ['Michael', 'Steven', 'Peter'];
+
+const years = new Array(1991, 2324, 1284, 2144);
+
+console.log(friends);
+console.log(friends.length);
+console.log(friends[friends.length - 1]);
+
+friends[2] = 'jay';
+
+console.log(friends);
+
+// Only primitive values are not able to be changed with const. You can mutate values in the array but not change the WHOLE array
+
+// Arrays can store multiple types of data and other arrays
+const matt = ['Matt', 'Lowe', 2021 - 1991, friends];
+
+console.log(matt);
+
+const calcAge = function(birthYear) {
+  return 2021 - birthYear;
+}
+
+const yearsBirth = [1990, 1991, 1992, 1993, 1994, 1995];
+
+const age1 = calcAge(yearsBirth[0]);
+const age2 = calcAge(yearsBirth[3]);
+const age3 = calcAge(yearsBirth[yearsBirth.length - 1]);
+
+console.log(age1, age2, age3);
+
+const ages = [calcAge(yearsBirth[0]), calcAge(yearsBirth[2]), calcAge(yearsBirth[yearsBirth.length - 1])];
+
+console.log(ages);
+
+*/
 
 
 
